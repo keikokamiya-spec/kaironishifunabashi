@@ -1382,3 +1382,64 @@ body.sitemap #mainImageWrap{
 	background-image:none;
 	height:0;
 	}	
+
+/* Header balance adjustment for the local site copy */
+#header {
+	padding-top: 18px;
+	padding-bottom: 10px;
+}
+#header #headerInner {
+	position: relative;
+	min-height: 112px;
+	padding: 16px 22px 14px;
+	background: rgba(255, 255, 255, 0.52);
+	border: 1px solid rgba(194, 226, 246, 0.9);
+	box-shadow: 0 1px 8px rgba(92, 150, 190, 0.12);
+}
+#header h1 {
+	float: none;
+	padding-top: 0;
+	margin: 0 0 12px;
+	color: #7b8b98;
+}
+#header #headerLeft {
+	width: 590px;
+}
+#header #headerLeft #logo {
+	margin-top: 0;
+}
+#header #headerLeft #logo img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+#header #headerLeft h2 {
+	margin-top: 14px;
+	font-size: 92%;
+	line-height: 1.7;
+}
+#header #headerRight {
+	width: 250px;
+	padding-top: 34px;
+}
+#header #headerRight #telNumberWrap {
+	margin-top: 0;
+}
+#header #headerRight div#telNumber {
+	float: none;
+	text-align: right;
+}
+#header #headerRight #telNumber img {
+	width: 210px;
+	height: auto;
+}
+#header #headerRightUnder {
+	margin-top: 8px;
+}
+#header #headerRightUnder #fontSizeChange {
+	float: right;
+	width: 165px;
+}
+#mainImageWrap {
+	margin-top: 0;
+}
