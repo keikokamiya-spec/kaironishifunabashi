@@ -5,12 +5,20 @@ function smartRollover() {
 		for(var i=0; i < images.length; i++) {
 			if(images[i].getAttribute("src").match("_mouseout."))
 			{
-				images[i].onmouseover = function() {
-					this.setAttribute("src", this.getAttribute("src").replace("_mouseout.", "_mouseover."));
-				}
-				images[i].onmouseout = function() {
-					this.setAttribute("src", this.getAttribute("src").replace("_mouseover.", "_mouseout."));
-				}
+				var mouseoutSrc = images[i].getAttribute("src");
+				var mouseoverSrc = mouseoutSrc.replace("_mouseout.", "_mouseover.");
+				var preload = new Image();
+				preload.onload = (function(image, over, out) {
+					return function() {
+						image.onmouseover = function() {
+							this.setAttribute("src", over);
+						}
+						image.onmouseout = function() {
+							this.setAttribute("src", out);
+						}
+					}
+				})(images[i], mouseoverSrc, mouseoutSrc);
+				preload.src = mouseoverSrc;
 			}
 		}
 	}
